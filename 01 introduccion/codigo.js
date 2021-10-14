@@ -1,1 +1,3 @@
-alert("hola");
+recipiento = "papel";
+
+alert(recipiente);
