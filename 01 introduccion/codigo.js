@@ -1,33 +1,37 @@
 
-// Asignacion +=
-let numero = 10;
-numero += 5;
-document.write(numero);
+//Suma
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 + numero2;
+document.write(resultado);
 
-// Asignacion -=
-numero = 10;
-numero -= 5;
-document.write(numero);
+//Resta
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 - numero2;
+document.write(resultado);
 
-// Asignacion *=
-numero = 10;
-numero *= 5;
-document.write(numero);
+//Multiplicacion
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 * numero2;
+document.write(resultado);
 
-// Asignacion /=
-numero = 10;
-numero /= 5;
-document.write(numero);
+//Division
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 / numero2;
+document.write(resultado);
 
-// Asignacion %=
-numero = 10;
-numero %= 5;
-document.write(numero);
+//Potencia
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 ** numero2;
+document.write(resultado);
 
-// Asignacion **=
-numero = 10;
-numero %= 5;
-document.write(numero);
-
-
+//Resto
+numero1 = 10;
+numero2 = 5;
+resultado = numero1 % numero2;
+document.write(resultado);
 
