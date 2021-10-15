@@ -1,8 +1,17 @@
-// Compuertas basicas
+//Condicionales
 
-let valor = true;
-let valor2 = false;
+if(true){
+    alert(`Se ejecuta`);
+}
 
-let resultado = valor && valor2;
-let resultado = valor || valor2;
-let resultado = !valor;
+if(false){
+    alert(`No se ejecuta`);
+}
+
+let num = 0;
+
+if(num > 0){
+    alert(`Numero mayor a 0`);
+}else{
+    alert(`Numero igual o menor a 0`);
+}
