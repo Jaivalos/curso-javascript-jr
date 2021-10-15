@@ -1,37 +1,17 @@
+//Concatenar texto
+saludo = "Hola Pedro";
+pregunta = " Como estas?";
+frase =saludo + pregunta;
+document.write(frase);
 
-//Suma
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 + numero2;
-document.write(resultado);
+//Concatenar numeros
+saludo = 3;
+pregunta = 1;
+frase ="" + saludo + pregunta;
+document.write(frase);
 
-//Resta
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 - numero2;
-document.write(resultado);
-
-//Multiplicacion
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 * numero2;
-document.write(resultado);
-
-//Division
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 / numero2;
-document.write(resultado);
-
-//Potencia
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 ** numero2;
-document.write(resultado);
-
-//Resto
-numero1 = 10;
-numero2 = 5;
-resultado = numero1 % numero2;
-document.write(resultado);
-
+//Concatenar con concat
+saludo = "Hola Pedro";
+pregunta = 78;
+frase =saludo.concat(pregunta);
+document.write(frase);
