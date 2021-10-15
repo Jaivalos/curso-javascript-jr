@@ -1,2 +1,33 @@
-let nombre = prompt("Decime tu nombre");
-alert("Hola " + nombre);
+
+// Asignacion +=
+let numero = 10;
+numero += 5;
+document.write(numero);
+
+// Asignacion -=
+numero = 10;
+numero -= 5;
+document.write(numero);
+
+// Asignacion *=
+numero = 10;
+numero *= 5;
+document.write(numero);
+
+// Asignacion /=
+numero = 10;
+numero /= 5;
+document.write(numero);
+
+// Asignacion %=
+numero = 10;
+numero %= 5;
+document.write(numero);
+
+// Asignacion **=
+numero = 10;
+numero %= 5;
+document.write(numero);
+
+
+
