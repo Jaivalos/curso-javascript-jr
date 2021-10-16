@@ -2,9 +2,12 @@
 
 let numeroParaSumar = 0;
 
-do{
+while(numeroParaSumar < 10){
     numeroParaSumar++;
     document.write(numeroParaSumar);
-}while(numeroParaSumar > 10);
+    if(numeroParaSumar == 10){
+        break;
+    }
+};
 
 
