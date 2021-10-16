@@ -1,5 +1,11 @@
-// Ciclo for
+// Ciclo for in
 
-for(let i = 0; i <= 5; i++){
-    document.write(i + "<br>");
+let animales = ["gato", "perro", "mosca"];
+
+for(let animal in animales){
+    document.write(animal + "<br>");
+}
+
+for(animal of animales){
+    document.write(animal + "<br>");
 }
