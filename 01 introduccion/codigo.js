@@ -1,13 +1,5 @@
-// Ciclo while 
+// Ciclo for
 
-let numeroParaSumar = 0;
-
-while(numeroParaSumar < 10){
-    numeroParaSumar++;
-    document.write(numeroParaSumar);
-    if(numeroParaSumar == 10){
-        break;
-    }
-};
-
-
+for(let i = 0; i <= 5; i++){
+    document.write(i + "<br>");
+}
