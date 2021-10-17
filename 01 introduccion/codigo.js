@@ -1,12 +1,12 @@
-//Funciones
+//Return
+
+//EL RETURN TERMINA LA FUNCION, ES COMO UN BREAK
 
 function saludar(){
-    let resp = prompt("Hola lucas como estas?");
-    if(resp == "bien"){
-        alert("Una pena");
-    }else alert("Me alegro");
-};
+    alert("Hola");
+    return "Para eso sirve el return";
+}
 
-saludar();
-saludar();
+let saludo = saludar();
 
+document.write(saludo);
