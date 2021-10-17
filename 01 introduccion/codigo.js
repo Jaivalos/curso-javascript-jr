@@ -1,18 +1,31 @@
-let free = false;
 
-const validarCliente = time => {
-    let edad = prompt("Cual es tu edad?");
-    if(edad > 18){
-        if(time >= 2 && time < 7 && free == false){
-            alert(`Podes pasar porque sos la primer persona despues de las 2am`);
-            free = true;
-        }else alert(`Podes pasar pero tenes que pagar la entrada, son las ${time} horas`);
-    }else alert(`No podes pasar`);
+let cantidad = prompt("Cuantos alumnos son?");
+let alumnosTotales = [];
+
+for(i = 0; i<cantidad; i++){
+    alumnosTotales[i] = [prompt("Nombre del alumno "+(i+1)),0];
 }
 
-validarCliente(23);
-validarCliente(12);
-validarCliente(0.6);
-validarCliente(45);
-validarCliente(7);
-validarCliente(2);
+const tomarAsistencia = (nombre, p)=>{
+    let presencia = prompt(nombre);
+    if(presencia == "p" || presencia == "P"){
+        alumnosTotales[p][1]++;
+    }
+}
+
+for( i = 0; i < 30; i++){
+    for(alumno in alumnosTotales){
+        tomarAsistencia(alumnosTotales[alumno][0], alumno);
+    }
+}
+
+for(alumno in alumnosTotales){
+    let res = `${alumnosTotales[alumno][0]}: <br>
+    Asistencia: ${alumnosTotales[alumno][1]} <br>
+    Ausencias: ${30 - alumnosTotales[alumno][1]} <br>
+    `;
+    if(30 - alumnosTotales[alumno][1] > 18){
+        res += `Reprobado por inacistencias <br><br>`;
+    }else res += `<br><br>`;
+    document.write(res);
+}
