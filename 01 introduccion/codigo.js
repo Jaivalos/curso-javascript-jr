@@ -1,27 +1,13 @@
-//Parametros
+//Ejemplo de funcion flecha
 
-function suma(num1, num2){
-    let res = num1 + num2;
-    document.write(res);
-    document.write(`<br>`);
-}
+/* function saludar(nombre){
+    let saludo = `Hola ${nombre} como te va?`;
+    document.write(saludo);
+} */
 
-suma(12, 32);
-suma(22, 32);
+// Es mucho mejor utilizar las funciones flecha, ya que es algo mas utilizado, este es el modelo normal:
 
-//Otro ejemplo con return
-
-function res(num1, num2){
-    let res = num1 + num2;
-    return (res + `<br>`);
-}
-
-let resultado = res(20, 25);
-document.write(resultado);
-
-//Ejemplo de saludar
-
-function saludar(nombre){
+const saludar = (nombre)=>{
     let saludo = `Hola ${nombre} como te va?`;
     document.write(saludo);
 }
