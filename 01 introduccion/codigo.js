@@ -1,11 +1,12 @@
-// Ciclo for in
+//Funciones
 
-let animales = ["gato", "perro", "mosca"];
+function saludar(){
+    let resp = prompt("Hola lucas como estas?");
+    if(resp == "bien"){
+        alert("Una pena");
+    }else alert("Me alegro");
+};
 
-for(let animal in animales){
-    document.write(animal + "<br>");
-}
+saludar();
+saludar();
 
-for(animal of animales){
-    document.write(animal + "<br>");
-}
