@@ -1,15 +1,18 @@
-//Ejemplo de funcion flecha
+let free = false;
 
-/* function saludar(nombre){
-    let saludo = `Hola ${nombre} como te va?`;
-    document.write(saludo);
-} */
-
-// Es mucho mejor utilizar las funciones flecha, ya que es algo mas utilizado, este es el modelo normal:
-
-const saludar = (nombre)=>{
-    let saludo = `Hola ${nombre} como te va?`;
-    document.write(saludo);
+const validarCliente = time => {
+    let edad = prompt("Cual es tu edad?");
+    if(edad > 18){
+        if(time >= 2 && time < 7 && free == false){
+            alert(`Podes pasar porque sos la primer persona despues de las 2am`);
+            free = true;
+        }else alert(`Podes pasar pero tenes que pagar la entrada, son las ${time} horas`);
+    }else alert(`No podes pasar`);
 }
 
-saludar("Papagayo");
+validarCliente(23);
+validarCliente(12);
+validarCliente(0.6);
+validarCliente(45);
+validarCliente(7);
+validarCliente(2);
