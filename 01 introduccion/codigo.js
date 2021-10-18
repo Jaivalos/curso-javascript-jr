@@ -1,31 +1,38 @@
 
-let cantidad = prompt("Cuantos alumnos son?");
-let alumnosTotales = [];
-
-for(i = 0; i<cantidad; i++){
-    alumnosTotales[i] = [prompt("Nombre del alumno "+(i+1)),0];
+const sumar = (num1, num2)=>{
+    return num1 + num2;
+}
+const resta = (num1, num2)=>{
+    return num1 - num2;
+}
+const mult = (num1, num2)=>{
+    return num1 * num2;
+}
+const div = (num1, num2)=>{
+    return num1 / num2;
 }
 
-const tomarAsistencia = (nombre, p)=>{
-    let presencia = prompt(nombre);
-    if(presencia == "p" || presencia == "P"){
-        alumnosTotales[p][1]++;
-    }
-}
+alert(`Que operacion deseas realizar?`);
+let operacion = prompt(`1. Suma, 2. Resta, 3. Multiplicacion, 4. Division`);
 
-for( i = 0; i < 30; i++){
-    for(alumno in alumnosTotales){
-        tomarAsistencia(alumnosTotales[alumno][0], alumno);
-    }
-}
-
-for(alumno in alumnosTotales){
-    let res = `${alumnosTotales[alumno][0]}: <br>
-    Asistencia: ${alumnosTotales[alumno][1]} <br>
-    Ausencias: ${30 - alumnosTotales[alumno][1]} <br>
-    `;
-    if(30 - alumnosTotales[alumno][1] > 18){
-        res += `Reprobado por inacistencias <br><br>`;
-    }else res += `<br><br>`;
-    document.write(res);
-}
+if(operacion == 1){
+    let numero1 = prompt(`Ingresa el primer numero`);
+    let numero2= prompt(`Ingresa el segudno numero`);
+    let res= sumar(numero1, numero2);  
+    alert(`Tu resultado es: ${res}`);
+}else if(operacion == 2){
+    let numero1 = prompt(`Ingresa el primer numero`);
+    let numero2= prompt(`Ingresa el segudno numero`);
+    let res= resta(numero1, numero2);
+    alert(`Tu resultado es: ${res}`);  
+}else if(operacion == 3){
+    let numero1 = prompt(`Ingresa el primer numero`);
+    let numero2= prompt(`Ingresa el segudno numero`);
+    let res= mult(numero1, numero2); 
+    alert(`Tu resultado es: ${res}`); 
+}else if(operacion == 4){
+    let numero1 = prompt(`Ingresa el primer numero`);
+    let numero2= prompt(`Ingresa el segudno numero`);
+    let res= div(numero1, numero2);  
+    alert(`Tu resultado es: ${res}`);
+}else alert(`Numero no reconocido`);
