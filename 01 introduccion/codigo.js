@@ -1,6 +1,6 @@
 // Clases
 
-class animal{
+class Animal{
     constructor(especie, edad, color){
         //Atributos
         this.especie = especie;
@@ -14,10 +14,22 @@ class animal{
     }
 }
 
-let perro = new animal(`Perro`, `2`, `cafe`);
-let gato = new animal(`Gato`, `2`, `negro`);
-let jirafa = new animal(`Jirafa`, `23`, `Amarillo`);
+//Herencia
+class Perro extends Animal{
+    constructor(especie,edad,color,raza){
+        super(especie,edad,color)
+        this.raza = raza;
+    }
+    ladrar = ()=>{
+        alert(`GUAU!!`);
+    }
+}
 
+let perro = new Perro(`Perro`, `2`, `cafe`, `boxer`);
+let gato = new Animal(`Gato`, `2`, `negro`);
+let jirafa = new Animal(`Jirafa`, `23`, `Amarillo`);
+
+perro.ladrar();
 perro.verinfo();
 gato.verinfo();
 jirafa.verinfo();
