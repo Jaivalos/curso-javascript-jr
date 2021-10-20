@@ -20,16 +20,20 @@ class Perro extends Animal{
         super(especie,edad,color)
         this.raza = raza;
     }
-    ladrar = ()=>{
+    //Metodo estatico
+    static ladrar = ()=>{
         alert(`GUAU!!`);
     }
 }
+
+//Llamamos al metodo directamten desde la clase
+Perro.ladrar();
 
 let perro = new Perro(`Perro`, `2`, `cafe`, `boxer`);
 let gato = new Animal(`Gato`, `2`, `negro`);
 let jirafa = new Animal(`Jirafa`, `23`, `Amarillo`);
 
-perro.ladrar();
+// No se puede hacer esto con uno static perro.ladrar();
 perro.verinfo();
 gato.verinfo();
 jirafa.verinfo();
