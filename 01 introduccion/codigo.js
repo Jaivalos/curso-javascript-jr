@@ -1,91 +1,64 @@
+//Metodos de cadenas
 
-class celulares{
-    constructor(color,peso,rp,rc,ram){
-        this.color = color;
-        this.peso = peso;
-        this.rp = rp;
-        this.rc = rc;
-        this.ram = ram;
-        this.encendido = false;
-    }
-    
-    presBoton = ()=>{
-        if(this.encendido == false){
-            alert(`Encendiendo...`);
-            this.encendido = true;
-        }else alert(`Telefono Apagado`);
-    }
+//concat
+cadena = `Cadena de prueba `;
+cadena2 = `Cadena 2`;
 
-    reiniciar = ()=>{
-        if(this.encendido == false){
-            alert(`Telefono apagado`);
-            this.encendido = true;
-        }else alert(`Reiniciando`);
-    }
+resultado = cadena.concat(cadena2);
+document.write(resultado + `<br>`);
 
-    tomarFotos = () =>{
-        if(this.encendido == true){
-            alert(`Foto tomada en la resolucion de ${this.rc}`);
-        }else{alert(`Celular apagado`);}
-    }
+//startsWith
+cadena = `Cadena 2 de prueba `;
+cadena2 = `Cadena 2`;
 
-    tomarVideo = () =>{
-        if(this.encendido == true){
-            alert(`Video tomado en la resolucion de ${this.rc}`);
-        }else{alert(`Celular apagado`);}
-    }
+resultado = cadena.startsWith(cadena2);
+document.write(resultado + `<br>`);
 
-    mobileInfo = () =>{
-        return `
-        Color: <b>${this.color}</b><br>
-        Peso: <b>${this.peso}</b><br>
-        Resolucion de la pantalla: <b>${this.rp}</b><br>
-        Resolucion de la camara: <b>${this.rc}</b><br>
-        RAM: <b>${this.ram}</b><br><br>
-        `
-    }
-}
+//endsWith
+cadena = `Cadena 2 de prueba `;
+cadena2 = `Cadena 2`;
 
-class celularAltaGama extends celulares {
-    constructor(color,peso,rp,rc,ram,rce){
-        super(color,peso,rp,rc,ram);
-        this.rce = rce;
-    }
+resultado = cadena.endsWith(cadena2);
+document.write(resultado + `<br>`);
 
-    grabarVideoLento = () =>{
-        if(this.encendido == true){
-            alert(`Video en camara lenta tomado en la resolucion de ${this.rce}`);
-        }else{alert(`Celular apagado`);}
-    }
+//includes
+cadena = `Cadena 2 de prueba `;
+cadena2 = `de`;
 
-    reconocimientoFacial = () =>{
-        if(this.encendido == true){
-            alert(`Reconocimiento facial listo`);
-        }else{alert(`Celular apagado`);}
-    }
+resultado = cadena.includes(cadena2);
+document.write(resultado + `<br>`);
 
-    mobileInfoHigh = () =>{
-        return `
-        Color: <b>${this.color}</b><br>
-        Peso: <b>${this.peso}</b><br>
-        Resolucion de la pantalla: <b>${this.rp}</b><br>
-        Resolucion de la camara: <b>${this.rc}</b><br>
-        RAM: <b>${this.ram}</b><br>
-        Resolucion camara extra: <b>${this.rce}</b><br><br>
-        `
-    }
-}
+//indexOf
+cadena = `Cadena 2 de prueba `;
+cadena2 = `de`;
 
-celular1 = new celulares("Azul", "500px", "FullHD", "12mp", "16Gb");
-celular2 = new celulares("Verde", "50px", "HD", "15mp", "8Gb");
-celular3 = new celulares("Cafe", "504px", "FullHD", "12mp", "4Gb");
+resultado = cadena.indexOf(cadena2);
+document.write(resultado + `<br>`);
 
-celularA1 = new celularAltaGama("cafe", "100gr", "UHD", "45mp", "32Gb", "15mp");
-celularA2 = new celularAltaGama("cafe", "100gr", "UHD", "45mp", "32Gb", "15mp");
+//lastIndexOf
+cadena = `Cadena 2 de prueba `;
+cadena2 = `de`;
 
-document.write(celular1.mobileInfo());
-document.write(celular2.mobileInfo());
-document.write(celular3.mobileInfo());
+resultado = cadena.lastIndexOf(cadena2);
+document.write(resultado + `<br>`);
 
-document.write(celularA1.mobileInfoHigh());
-document.write(celularA2.mobileInfoHigh());
+//padStart
+cadena = `abc`;
+cadena2 = ``;
+
+resultado = cadena.padStart(6, `1`);
+document.write(resultado + `<br>`);
+
+//padEnd
+cadena = `abc`;
+cadena2 = ``;
+
+resultado = cadena.padEnd(6, `1`);
+document.write(resultado + `<br>`);
+
+//repeat
+cadena = `abc `;
+cadena2 = ``;
+
+resultado = cadena.repeat(5);
+document.write(resultado + `<br>`);
