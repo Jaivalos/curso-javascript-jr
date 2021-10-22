@@ -1,17 +1,18 @@
-//Metodos accesores de array
+//Metodos de repeticion de array
 
-//join
-nombres = [`Pedro`, `Maria`, `Juan`];
-document.write(nombres + `<br>`)
+//filter()
 
-let res = nombres.join(` <br> Element: `); //Convierte en una cadena de texto
-document.write(`Element: ` + res + `<br>`);
+let numeros = ["Uno","Dos","Tres","Cuatro","Cinco"];
 
-//slice
-nombres = [`Pedro`, `Maria`, `Juan`];
-document.write(nombres + `<br>`)
+res = numeros.filter(numero => numero.length > 4);
+document.write(res + "<br>")
 
-res = nombres.slice(0,2); //Convierte en una cadena de texto
-document.write(`Elements: ` + res + `<br>`);
+//Es un ciclo que obtendra cada uno de los elementos del array
 
-//Los metdos vistos en cadena funcionan igual en los arrays
+//forEach()
+
+let numeros2 = ["Uno","Dos","Tres","Cuatro","Cinco"];
+
+numeros2.filter(numero => document.write(numero + "<br>"));
+
+//Es un ciclo que obtendra cada uno de los elementos del array
