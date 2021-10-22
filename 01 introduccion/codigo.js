@@ -1,64 +1,50 @@
-//Metodos de cadenas
+//Metodos de cadenas parte 2
 
-//concat
-cadena = `Cadena de prueba `;
-cadena2 = `Cadena 2`;
+//split
+cadena = `Cadena, de, prueba `;
+cadena2 = `hOLA MUNDO`;
 
-resultado = cadena.concat(cadena2);
+resultado = cadena.split(`,`);
+document.write(resultado + `<br>`);
+document.write(resultado[0] + `<br>`);
+document.write(resultado[1] + `<br>`);
+document.write(resultado[2] + `<br>`);
+
+//substring
+cadena = `ABCDESx`;
+cadena2 = `hOLA MUNDO`;
+
+resultado = cadena.substring(0,2);
+document.write(resultado + `<br>`);
+resultado = cadena.substring(4,6);
 document.write(resultado + `<br>`);
 
-//startsWith
-cadena = `Cadena 2 de prueba `;
-cadena2 = `Cadena 2`;
+//toLowerCase
+cadena = `ABCDESx`;
+cadena2 = `hOLA MUNDO`;
 
-resultado = cadena.startsWith(cadena2);
+resultado = cadena.toLowerCase();
 document.write(resultado + `<br>`);
 
-//endsWith
-cadena = `Cadena 2 de prueba `;
-cadena2 = `Cadena 2`;
+//toUpperCase
+cadena = `ABCccSx`;
+cadena2 = `hOLA MUNDO`;
 
-resultado = cadena.endsWith(cadena2);
+resultado = cadena.toUpperCase();
 document.write(resultado + `<br>`);
 
-//includes
-cadena = `Cadena 2 de prueba `;
-cadena2 = `de`;
+//toString
+cadena = 50*8;
+cadena2 = `hOLA MUNDO`;
 
-resultado = cadena.includes(cadena2);
-document.write(resultado + `<br>`);
+resultado = cadena.toString();
+document.write(resultado + 4 + `<br>`);
 
-//indexOf
-cadena = `Cadena 2 de prueba `;
-cadena2 = `de`;
+//trim, ademas existe trimStart y trimEnd. Elimina los espacios dependiendo de lo que le digamos. 
+cadena = "Tengo sueno";
+cadena2 = `hOLA MUNDO`;
 
-resultado = cadena.indexOf(cadena2);
-document.write(resultado + `<br>`);
-
-//lastIndexOf
-cadena = `Cadena 2 de prueba `;
-cadena2 = `de`;
-
-resultado = cadena.lastIndexOf(cadena2);
-document.write(resultado + `<br>`);
-
-//padStart
-cadena = `abc`;
-cadena2 = ``;
-
-resultado = cadena.padStart(6, `1`);
-document.write(resultado + `<br>`);
-
-//padEnd
-cadena = `abc`;
-cadena2 = ``;
-
-resultado = cadena.padEnd(6, `1`);
-document.write(resultado + `<br>`);
-
-//repeat
-cadena = `abc `;
-cadena2 = ``;
-
-resultado = cadena.repeat(5);
-document.write(resultado + `<br>`);
+resultado = cadena.trim();
+document.write(resultado);
+resultado = cadena.length;
+document.write(` - ` + resultado + `<br>`);
