@@ -1,50 +1,45 @@
-//Metodos de cadenas parte 2
+//Metodos transformadores de array
 
-//split
-cadena = `Cadena, de, prueba `;
-cadena2 = `hOLA MUNDO`;
+//pop
+nombres = [`Pedro`, `Maria`, `Juan`];
+resultad = nombres.pop();
+document.write(resultad + `<br>`);
+document.write(nombres + `<br>`);
 
-resultado = cadena.split(`,`);
-document.write(resultado + `<br>`);
-document.write(resultado[0] + `<br>`);
-document.write(resultado[1] + `<br>`);
-document.write(resultado[2] + `<br>`);
+//shift
+nombres = [`Pedro`, `Maria`, `Juan`];
+resultad = nombres.shift();
+document.write(resultad + `<br>`);
+document.write(nombres + `<br>`);
 
-//substring
-cadena = `ABCDESx`;
-cadena2 = `hOLA MUNDO`;
+//push
+nombres = [`Pedro`, `Maria`, `Juan`];
+resultad = nombres.push(`Juancito`);
+document.write(resultad + `<br>`);
+document.write(nombres + `<br>`);
 
-resultado = cadena.substring(0,2);
-document.write(resultado + `<br>`);
-resultado = cadena.substring(4,6);
-document.write(resultado + `<br>`);
+//reverse
+nombres = [`Pedro`, `Maria`, `Juan`];
+document.write(nombres + `<br>`);
+resultad = nombres.reverse();
+document.write(resultad + `<br>`);
 
-//toLowerCase
-cadena = `ABCDESx`;
-cadena2 = `hOLA MUNDO`;
+//unshift
+nombres = [`Pedro`, `Maria`, `Juan`];
+resultad = nombres.unshift(1,2,"tercero");
+document.write(resultad + `<br>`);
+document.write(nombres + `<br>`);
 
-resultado = cadena.toLowerCase();
-document.write(resultado + `<br>`);
+//unshift
+nombres = [6,4,6,7,4,2,5,23,45,12,235,233,512345,4];
+document.write(nombres + `<br>`);
+resultad = nombres.sort();
+document.write(resultad + `<br>`);
 
-//toUpperCase
-cadena = `ABCccSx`;
-cadena2 = `hOLA MUNDO`;
-
-resultado = cadena.toUpperCase();
-document.write(resultado + `<br>`);
-
-//toString
-cadena = 50*8;
-cadena2 = `hOLA MUNDO`;
-
-resultado = cadena.toString();
-document.write(resultado + 4 + `<br>`);
-
-//trim, ademas existe trimStart y trimEnd. Elimina los espacios dependiendo de lo que le digamos. 
-cadena = "Tengo sueno";
-cadena2 = `hOLA MUNDO`;
-
-resultado = cadena.trim();
-document.write(resultado);
-resultado = cadena.length;
-document.write(` - ` + resultado + `<br>`);
+//splice
+nombres = [6,4,6,7,4,2,5,23,45,12,235,233,512345,4];
+document.write(nombres + `<br>`);
+resultad = nombres.splice(3,4);
+document.write(nombres + `<br>`);
+resultad = nombres.splice(1,2,"mamerto");
+document.write(nombres + `<br>`);
