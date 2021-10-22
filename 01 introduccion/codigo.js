@@ -1,45 +1,17 @@
-//Metodos transformadores de array
+//Metodos accesores de array
 
-//pop
+//join
 nombres = [`Pedro`, `Maria`, `Juan`];
-resultad = nombres.pop();
-document.write(resultad + `<br>`);
-document.write(nombres + `<br>`);
+document.write(nombres + `<br>`)
 
-//shift
+let res = nombres.join(` <br> Element: `); //Convierte en una cadena de texto
+document.write(`Element: ` + res + `<br>`);
+
+//slice
 nombres = [`Pedro`, `Maria`, `Juan`];
-resultad = nombres.shift();
-document.write(resultad + `<br>`);
-document.write(nombres + `<br>`);
+document.write(nombres + `<br>`)
 
-//push
-nombres = [`Pedro`, `Maria`, `Juan`];
-resultad = nombres.push(`Juancito`);
-document.write(resultad + `<br>`);
-document.write(nombres + `<br>`);
+res = nombres.slice(0,2); //Convierte en una cadena de texto
+document.write(`Elements: ` + res + `<br>`);
 
-//reverse
-nombres = [`Pedro`, `Maria`, `Juan`];
-document.write(nombres + `<br>`);
-resultad = nombres.reverse();
-document.write(resultad + `<br>`);
-
-//unshift
-nombres = [`Pedro`, `Maria`, `Juan`];
-resultad = nombres.unshift(1,2,"tercero");
-document.write(resultad + `<br>`);
-document.write(nombres + `<br>`);
-
-//unshift
-nombres = [6,4,6,7,4,2,5,23,45,12,235,233,512345,4];
-document.write(nombres + `<br>`);
-resultad = nombres.sort();
-document.write(resultad + `<br>`);
-
-//splice
-nombres = [6,4,6,7,4,2,5,23,45,12,235,233,512345,4];
-document.write(nombres + `<br>`);
-resultad = nombres.splice(3,4);
-document.write(nombres + `<br>`);
-resultad = nombres.splice(1,2,"mamerto");
-document.write(nombres + `<br>`);
+//Los metdos vistos en cadena funcionan igual en los arrays
