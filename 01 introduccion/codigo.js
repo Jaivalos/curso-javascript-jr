@@ -1,67 +1,61 @@
-//Ejemplo de calculadora por prompt
 
-class calculadora {
-    constructor(){
+/*Se crea una funcion para obtener la info de cada uno de los alumnos en las clases
+con un valor de entrada que sera la materia que se quiere buscar*/
+const obtenerInfo = (materia)=>{
+    //Se crea un arreglo dinamico
+    materias = {
+        fisica: ["Perez","Pedro", "Juan", "Maria", "Lucas", "Jesus"],
+        programacion: ["Martinez","Pedro", "Juan", "Maria", "Pepe", "Jesus"],
+        logica: ["Martinez","Martin", "Juan", "Maria", "Lucas", "Jesus"],
+        quimica: ["Perez","Pedro", "Juan", "Maria", "Jose", "Jesus"]
+    };
+    //Se consulta si el valor de entrada existe en el arreglo dinamico
+    if(materias[materia] !== undefined){
+        /*En la primer posicion del arreglo se selecciona la materia que se quiere mostrar
+        la segunda sirve para seleccionar si se quiere mostrar el nombre de la materia o los 
+        alumnos dentro de esa materia*/
+        return [materias[materia],materia,materias];
+    }else return materias;
+}
+//Se crea una funcion donde se muestren los alumnos
+const mostrarInfo = (materia)=>{
+    let info = obtenerInfo(materia);
+    if(info !== false){
+        /*El profesor es el primer elemento de cada clase, por lo que se selecciona 
+        el primer elemento de ese arreglo*/
+        let profesor = info[0][0];
+        let alumnos = info[0];
+        alumnos.shift();
+        //Aca es donde se utiliza el arreglo dentro de otro arreglo
+        document.write(`<br>El profesor de ${info[1]} es:<b> ${profesor} </b><br>y los alumnos son: <b style = "color: red"> ${(alumnos)}</b>`);
+    };
+}
+//Creamos una funcion para poder ver las clases en las que estan los alumnos
+const cantClases = (alumno) => {
+    //Creamos nuevamente la clase informacion
+    let informacion = obtenerInfo();
+    //Contador de clases y clases 
+    let cant = 0;
+    let clasesPresentes = [];
+    //Recorremos el vector de informacion
+    for(info in informacion){
+        /*Si imformacion en la posicion info tiene al alumno 
+        que estamos buscando sumamos uno y agregamos la clase en el vector*/
+        if(informacion[info].includes(alumno)){
+            cant++;
+            clasesPresentes.push(info);
+        }
     }
-    sumar = (num1, num2)=>{
-        return num1 + num2;
-    }
-    resta = (num1, num2)=>{
-        return num1 - num2;
-    }
-    mult = (num1, num2)=>{
-        return num1 * num2;
-    }
-    div = (num1, num2)=>{
-        return num1 / num2;
-    }
-    pot = (num1, exp)=>{
-        return num1 ** exp;
-    }
-    r2 = (num1)=>{
-        return Math.sqrt(num1);
-    }
-    r3 = (num1)=>{
-        return Math.cbrt(num1);
-    }
+    //Mostramos
+    document.write(`<br>El alumno: ${alumno} esta en: ${cant}, <br> Esta cursando <b style= "color:green">${clasesPresentes}</b>`);
 }
 
-const calc = new calculadora();
+mostrarInfo("fisica");
+mostrarInfo("programacion");
+mostrarInfo("logica");
+mostrarInfo("quimica");
 
-alert(`Que operacion deseas realizar?`);
-let operacion = prompt(`1. Suma, 2. Resta, 3. Multiplicacion, 4. Division, 5. Potencia a la x, 6. Raiz cuadrada, 7. Raiz cubica `);
-
-if(operacion == 1){
-    let numero1 = prompt(`Ingresa el primer numero`);
-    let numero2= prompt(`Ingresa el segudno numero`);
-    let res= calc.sumar(numero1, numero2);  
-    alert(`Tu resultado es: ${res}`);
-}else if(operacion == 2){
-    let numero1 = prompt(`Ingresa el primer numero`);
-    let numero2= prompt(`Ingresa el segudno numero`);
-    let res= calc.resta(numero1, numero2);
-    alert(`Tu resultado es: ${res}`);  
-}else if(operacion == 3){
-    let numero1 = prompt(`Ingresa el primer numero`);
-    let numero2= prompt(`Ingresa el segudno numero`);
-    let res= calc.mult(numero1, numero2); 
-    alert(`Tu resultado es: ${res}`); 
-}else if(operacion == 4){
-    let numero1 = prompt(`Ingresa el primer numero`);
-    let numero2= prompt(`Ingresa el segudno numero`);
-    let res= calc.div(numero1, numero2);  
-    alert(`Tu resultado es: ${res}`);
-}else if(operacion == 5){
-    let numero1 = prompt(`Ingresa la base`);
-    let numero2= prompt(`Ingresa el exponente`);
-    let res= calc.pot(numero1, numero2);  
-    alert(`Tu resultado es: ${res}`);
-}else if(operacion == 6){
-    let numero1 = prompt(`Ingresa la base`);
-    let res= calc.r2(numero1);  
-    alert(`Tu resultado es: ${res}`);
-}else if(operacion == 7){
-    let numero1 = prompt(`Ingresa la base`);
-    let res= calc.r3(numero1);  
-    alert(`Tu resultado es: ${res}`);
-}else alert(`Numero no reconocido`);
+cantClases("Pedro");
+cantClases("Maria");
+cantClases("Juan");
+cantClases("Jesus");
