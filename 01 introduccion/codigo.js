@@ -2,18 +2,11 @@
 
 La consola la podemos encontrar en un navegador con solo colocar inspeccionar
 
-Funciones de agrupacion*/
+Funciones de temporizacion*/
 
-//group
+//time
+//Para saber el tiempo desde el navegador se utiliza el console.timeLog, para terminarlo es console,timeEnd
+console.time();
 
-console.group("Master");
-console.log("Hola");
-console.table([4,5,4,34,3]);
-console.group("Segundo");
-console.log("Hola");
-console.table([4,5,4]);
-console.groupEnd();
-console.info("Maanna tienes que ir a la tienda");
-console.groupEnd();
-
-
+//Cambiar el texto en consola
+console.log("%cRancio","color:White; background-color:green;padding: 20px; border: 2px solid black;");
