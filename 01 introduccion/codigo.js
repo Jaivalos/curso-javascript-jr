@@ -1,12 +1,39 @@
-/*Consola
 
-La consola la podemos encontrar en un navegador con solo colocar inspeccionar
+//Historia de Cofla 5
 
-Funciones de temporizacion*/
+const materias = {
+    fisica: [91,6,3,"Fisica"],
+    matematica: [65,9,3,"Matematica"],
+    rrhh: [89,3,2,"RRHH"],
+    algebra: [90,8,3,"Algebra"],
+    ingles: [100,7,4,"Ingles"],
+    quimica: [56,9,2,"Quimica"],
+    programacion: [91,9,4,"Programacion"],
+}
 
-//time
-//Para saber el tiempo desde el navegador se utiliza el console.timeLog, para terminarlo es console,timeEnd
-console.time();
+const aprobo = ()=>{
+    for (materia in materias){
+        let asistencias = materias[materia][0];
+        let promedio = materias[materia][1];
+        let trabajos = materias[materia][2];
+        console.log(materias[materia][3]);
 
-//Cambiar el texto en consola
-console.log("%cRancio","color:White; background-color:green;padding: 20px; border: 2px solid black;");
+        if(asistencias>=90){
+            console.log("%c   Asistencia en orden", "color:green");
+        }else{
+            console.log("%c   Falta de asistencia", "color:red");
+        }
+        if(promedio>=7){
+            console.log("%c   Promedio en orden", "color:green");
+        }else{
+            console.log("%c   Falta de promedio", "color:red");
+        }
+        if(trabajos>=3){
+            console.log("%c   Trabajos en orden", "color:green");
+        }else{
+            console.log("%c   Trabajos faltantes", "color:red");
+        }
+    }
+}
+
+aprobo();
