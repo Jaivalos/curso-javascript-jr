@@ -1,39 +1,24 @@
 
-//Historia de Cofla 5
+let trabajo = "240 minutos para trabajar";
+let estudio = "100 minutos de estudio";
+let tp = '100 minutos de trabajos practicos';
+let housework = "30 minutos de tareas de la casa";
+let descanso = "10 minutos de descanso";
 
-const materias = {
-    fisica: [91,6,3,"Fisica"],
-    matematica: [65,9,3,"Matematica"],
-    rrhh: [89,3,2,"RRHH"],
-    algebra: [90,8,3,"Algebra"],
-    ingles: [100,7,4,"Ingles"],
-    quimica: [56,9,2,"Quimica"],
-    programacion: [91,9,4,"Programacion"],
-}
-
-const aprobo = ()=>{
-    for (materia in materias){
-        let asistencias = materias[materia][0];
-        let promedio = materias[materia][1];
-        let trabajos = materias[materia][2];
-        console.log(materias[materia][3]);
-
-        if(asistencias>=90){
-            console.log("%c   Asistencia en orden", "color:green");
-        }else{
-            console.log("%c   Falta de asistencia", "color:red");
-        }
-        if(promedio>=7){
-            console.log("%c   Promedio en orden", "color:green");
-        }else{
-            console.log("%c   Falta de promedio", "color:red");
-        }
-        if(trabajos>=3){
-            console.log("%c   Trabajos en orden", "color:green");
-        }else{
-            console.log("%c   Trabajos faltantes", "color:red");
-        }
+for(i = 1; i <= 14; i ++){
+    if(i == 1){
+        console.group("Semana 1");
+    }
+    console.log("Tareas");
+    console.group("Dia "+i);
+    console.log(trabajo);
+    console.log(estudio);
+    console.log(descanso);
+    console.log(tp);
+    console.log(housework);
+    console.groupEnd();
+    if(i == 7){
+        console.groupEnd();
+        console.group("Semana 2")
     }
 }
-
-aprobo();
