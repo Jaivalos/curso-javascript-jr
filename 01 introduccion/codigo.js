@@ -1,47 +1,30 @@
+/*Consola
 
-materias = {
-        fisica: ["Perez","Pedro", "Juan", "Maria", "Lucas", "Jesus"],
-        programacion: ["Martinez","Pedro", "Juan", "Maria", "Pepe", "Jesus"],
-        logica: ["Martinez","Martin", "Juan", "Maria", "Lucas", "Jesus"],
-        quimica: ["Perez","Pedro", "Juan", "Maria", "Jose", "Jesus"]
-    };
+La consola la podemos encontrar en un navegador con solo colocar inspeccionar
 
-const inscribir = (alumno,materia)=>{
-    personas = materias[materia];
-    if(personas.length >= 2){
-        document.write(`Lo siento <b> ${alumno} </b>los cupos de <b>${materia}</b> ya estan llenos`);
-    }else {
-        personas.push(alumno);
-        if(materia == "fisica"){
-            materias = {
-                fisica: personas,
-                programacion: materias["programacion"],
-                logica: materias["logica"],
-                quimica: materias["quimica"]
-            };
-        }else if(materia == "programacion"){
-            materias = {
-                fisica: materias["fisica"],
-                programacion: personas,
-                logica: materias["logica"],
-                quimica: materias["quimica"]
-            };
-        }else if(materia == "logica"){
-            materias = {
-                fisica: materias["fisica"],
-                programacion: materias["programacion"],
-                logica: personas,
-                quimica: materias["quimica"]
-            };
-        }else if(materia == "quimica"){
-            materias = {
-                fisica: materias["fisica"],
-                programacion: materias["logica"],
-                logica: materias["logica"],
-                quimica: personas
-            };
-        }document.write(`Felicidades ${alumno} te has inscrito en ${materia} correctamente`)
-    }
-}
+Funciones de regitro*/
 
-inscribir("Juanito", "fisica");
+//clear
+console.clear();
+
+//Assert
+console.assert(5>12);
+console.assert(5>2);
+
+//error
+console.error("Capo que hiciste?");
+
+//info
+console.info("Muy bien tu trabajo");
+
+//log
+console.log("Muy bien tu trabajo 2");
+
+//table
+console.table([4,5,6,3,3,55,,43,5324,4]);
+
+//warn
+console.warn("Debes cliquear para ejecutar");
+
+//dir
+console.dir([4,3,4,5,3,3]);
