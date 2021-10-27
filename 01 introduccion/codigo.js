@@ -1,17 +1,16 @@
 
-/* El dom es todo lo relacionado con la construccion de nuestra pagina web, 
-es la forma en la que creamos y construimos nuestra pagina*/
+//contentEditable
+let titulo = document.querySelector(".titulo");
+titulo.setAttribute("contentEditable","true");
 
-  //Metodos de seleccion de elementos
+//dir
+titulo = document.querySelector(".titulo");
+titulo.setAttribute("dir","rtl");
 
-  //getElementById
-  let parrafo = document.getElementById("parrafo");
-  document.write(parrafo + "<br>");
+//hidden
+titulo = document.querySelector(".titulo");
+//titulo.setAttribute("hidden","true");
 
-  //getElementByTagName
-  parrafo = document.getElementsByTagName("p");
-  document.write(parrafo + "<br>");
-
-  //querySelector
-  parrafo = document.querySelector("#parrafo");
-  document.write(parrafo + "<br>");
+//tabindex
+prueba = document.querySelector(".prueba");
+prueba.setAttribute("tabindex","1");
