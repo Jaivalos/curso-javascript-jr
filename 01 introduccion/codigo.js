@@ -1,7 +1,5 @@
 
-//Atributos de los imputs
+//Clases Classlist y 
 
-let input = document.querySelector(".clase2");
-input.style = `
-color: blue;
-`;
+const input = document.querySelector(".clase1");
+input.classList.add("dos");
