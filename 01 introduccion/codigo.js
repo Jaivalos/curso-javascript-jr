@@ -1,19 +1,8 @@
-/*
-//contentEditable
-let titulo = document.querySelector(".titulo");
-titulo.setAttribute("contentEditable","true");
 
-//dir
-titulo = document.querySelector(".titulo");
-titulo.setAttribute("dir","rtl");
+//Atributos de los imputs
 
-//hidden
-titulo = document.querySelector(".titulo");
-//titulo.setAttribute("hidden","true");
-
-//tabindex
-prueba = document.querySelector(".titulo");
-prueba.setAttribute("tabindex","dsg");*/
-
-prueba = document.querySelector(".titulo");
-prueba.setAttribute("title","Jajaja prueba");
+let input = document.querySelector(".clase2");
+document.write(input);
+document.write("<br>" + input.className);
+input.type = "range";
+document.write("<br>" + input.value);
