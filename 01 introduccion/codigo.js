@@ -2,4 +2,4 @@
 //Clases Classlist y 
 
 const input = document.querySelector(".clase1");
-input.classList.add("dos");
+input.classList.remove("clase1");
