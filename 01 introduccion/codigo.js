@@ -1,4 +1,4 @@
-
+/*
 //contentEditable
 let titulo = document.querySelector(".titulo");
 titulo.setAttribute("contentEditable","true");
@@ -12,5 +12,8 @@ titulo = document.querySelector(".titulo");
 //titulo.setAttribute("hidden","true");
 
 //tabindex
-prueba = document.querySelector(".prueba");
-prueba.setAttribute("tabindex","1");
+prueba = document.querySelector(".titulo");
+prueba.setAttribute("tabindex","dsg");*/
+
+prueba = document.querySelector(".titulo");
+prueba.setAttribute("title","Jajaja prueba");
