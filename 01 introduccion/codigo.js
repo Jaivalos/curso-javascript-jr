@@ -1,25 +1,14 @@
 
 //.innerHTML
 
-titulo = document.querySelector(`.titulo`);
+const cont = document.querySelector(".contenedor");
+const item = document.createElement("LI");
 
-resultado = titulo.textContent;
+//document.write(item);
+const textNode = document.createTextNode("Esta es un item de la lista");
 
-alert(`.textContent: `+resultado);
+item.appendChild(textNode);
 
-//.innerHTML
+cont.appendChild(textNode);
 
-titulo = document.querySelector(`.titulo`);
-
-resultado = titulo.innerHTML;
-
-alert(`.innerHTML: `+resultado);
-
-//.outerHTML
-
-titulo = document.querySelector(`.titulo`);
-
-resultado = titulo.outerHTML;
-
-alert(`.outerHTML: `+resultado);
-
+console.log(cont);
