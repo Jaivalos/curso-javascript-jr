@@ -1,24 +1,17 @@
 
-//.textContent
+//.innerHTML
 
 titulo = document.querySelector(`.titulo`);
 
-resultado = titulo.textContent;
+resultado = titulo.innerHTML;
 
-document.write(`.textContent: `+resultado+`<br>`);
+alert(`.innerHTML: `+resultado+`<br>`);
 
-//.innerText
-
-titulo = document.querySelector(`.titulo`);
-
-resultado = titulo.innerText;
-
-document.write(`.innerText: `+resultado+`<br>`);
-
-//.outerText
+//.outerHTML
 
 titulo = document.querySelector(`.titulo`);
 
-resultado = titulo.outerText;
+resultado = titulo.outerHTML;
 
-document.write(`.outerText: `+resultado+`<br>`);
+alert(`.outerHTML: `+resultado+`<br>`);
+
