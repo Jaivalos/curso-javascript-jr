@@ -1,14 +1,28 @@
 
-//.innerHTML
-
 const cont = document.querySelector(".contenedor");
-const item = document.createElement("LI");
 
-//document.write(item);
-const textNode = document.createTextNode("Esta es un item de la lista");
+//Obtener el primer hijo 
+let primHijo = cont.firstChild;
 
-item.appendChild(textNode);
+//Obtener el ultimo hijo 
+let ultHijo = cont.lastChild;
 
-cont.appendChild(textNode);
+//Obtener el primer elemento hijo 
+ primHijo = cont.firstElementChild;
 
-console.log(cont);
+//Obtener el ultimo elemento hijo 
+ ultHijo = cont.lastElementChild;
+
+ // LISTA DE LOS HIJOS 
+let nodeList = cont.childNodes;
+
+//Recorrer los nodos
+nodeList.forEach(hijo => console.log(hijo));
+
+// lISTA DE LOS OBJETOS HTML 
+let element = cont.children;
+
+//Recorrer los nodos del children
+for (const hijo of element) {
+    console.log(hijo);
+}
