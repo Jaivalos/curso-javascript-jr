@@ -1,7 +1,7 @@
 
 //METODOS DE CHILDS 
 
-//Remplazar un hijo
+//Eliminar un hijo
 
 const cont = document.querySelector(".contenedor");
 
@@ -11,3 +11,5 @@ pnuevo.innerHTML = "Parrafo";
 pviejo = document.querySelector(".pantiguo");
 
 cont.replaceChild(pnuevo,pviejo);
+
+cont.removeChild(pnuevo);
